@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#name: integration
+#short: Run an integration test
+
+cd "$REPO_BASE/myapp/webv" || exit
+
+webv --server http://localhost:30080 --files baseline.json --summary tsv
